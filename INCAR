@@ -1,0 +1,33 @@
+PREC   = Normal
+ENCUT  = 500
+EDIFF  = 1E-5        # 1E-5 is enough for MD forces (was 1E-6); ~halves SCF cost
+ISMEAR = 0
+SIGMA  = 0.05
+ALGO   = All         # required for R2SCAN metaGGA
+METAGGA = R2SCAN
+LASPH  = .TRUE.
+LREAL  = Auto        # real-space projection: needed for large supercells (was .FALSE.)
+ISYM   = 0           # no symmetry in MD
+NELM   = 200
+NELMIN = 6           # a few electronic steps per ionic step keeps forces smooth
+ADDGRID = .FALSE.
+LWAVE  = .FALSE.
+LCHARG = .FALSE.
+NWRITE = 0           # minimal OUTCAR over a long run
+
+IBRION = 0
+POTIM  = 2.0         # fs  (TIMESTEP; safe, no H, all heavy elements)
+NSW    = 17500       # 3500 frames x NBLOCK(5) = 17500 steps = 35 ps
+NBLOCK = 5           # write XDATCAR every 5 steps -> 10 fs stride -> 3500 frames
+
+MDALGO = 0
+SMASS  = -3          # microcanonical NVE (thermostat-free -> clean time correlations)
+ISIF   = 2           # fixed cell; use a thermally pre-expanded volume (see notes)
+TEBEG  = 450
+
+ML_LMLFF = .TRUE.
+ML_MODE  = run 
+
+# ===================== parallel (tune to your node) =====================
+NCORE  = 4
+KPAR   = 1

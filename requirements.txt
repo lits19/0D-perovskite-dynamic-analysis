@@ -1,0 +1,13 @@
+# Core scientific stack
+numpy
+scipy
+matplotlib
+
+# Trajectory I/O (extxyz <-> VASP XDATCAR conversion)
+ase
+
+# Octahedral tilt / distortion analysis engine
+# PDynA — Perovskite Dynamics Analysis
+#   https://github.com/WMD-group/PDynA
+#   pip install pdyna   (or install from source into the analysis env)
+pdyna

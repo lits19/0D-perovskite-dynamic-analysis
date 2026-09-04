@@ -1,0 +1,60 @@
+# =====================================================================
+#  Large MD data — regenerate locally, never commit to GitHub
+#  (a single XDATCAR is ~1 GB; the .npy / .npz bundles are tens of MB)
+# =====================================================================
+XDATCAR_*/XDATCAR
+*.npy
+*.npz
+*.xyz
+*.extxyz
+
+# VASP run outputs (if produced in this dir)
+OUTCAR*
+CONTCAR*
+OSZICAR*
+WAVECAR*
+CHGCAR*
+CHG
+DOSCAR
+EIGENVAL
+PROCAR
+vasprun.xml
+ML_*
+
+# =====================================================================
+#  Runtime scratch / logs
+# =====================================================================
+_err.log
+_vst.log
+_tcp.json
+_diag.json
+_glazer_status.json
+_pnglist.json
+tilting.json
+
+# =====================================================================
+#  Python
+# =====================================================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# =====================================================================
+#  OS / editor
+# =====================================================================
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# =====================================================================
+#  Kept on purpose (whitelisted for clarity):
+#    figs_*K/*.png   analysis figures (results)
+#    *.png           top-level result figures
+#    SUPERCELL_666.vasp, *.cif, INCAR   inputs (small)
+# =====================================================================

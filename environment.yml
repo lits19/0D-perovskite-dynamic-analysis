@@ -1,0 +1,17 @@
+# Conda environment for the Cs2SnI6 tilt/distortion analysis pipeline.
+#   conda env create -f environment.yml
+#   conda activate cs2sni6-mlff
+#
+# PDynA is not on conda-forge; it is installed via pip below.
+name: cs2sni6-mlff
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.9
+  - numpy
+  - scipy
+  - matplotlib
+  - ase
+  - pip
+  - pip:
+      - pdyna
