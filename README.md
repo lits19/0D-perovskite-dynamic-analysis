@@ -1,0 +1,1 @@
+# 0D-perovskite-dynamic-analysis
